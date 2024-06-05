@@ -11,7 +11,7 @@ build:
 
 # Test the create-gh-app image
 test:
-	docker run --rm -e STUB_FILE=1 -w /pwd -v $(PWD):/pwd $(IMG)
+	docker run --rm -e STUB_FILE=1 -v $(PWD):/pwd $(IMG)
 
 # Push the create-gh-app image
 push:
