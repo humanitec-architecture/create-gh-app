@@ -40,11 +40,7 @@ const default_permissions = {
   actions_variables: 'write',
   secrets: 'write',
   environments: 'write',
-}
-
-// Required to configure repository oidc customization (e.g. on azure)
-if (process.env.ACTIONS_WRITE === '1') {
-  default_permissions.actions = 'write';
+  actions: 'write',
 }
 
 const webhookUrl = `https://smee.io/${webhookId}`;
